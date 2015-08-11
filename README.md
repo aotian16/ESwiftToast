@@ -1,6 +1,8 @@
 # ESwiftToast
 An android like toast lib write in swift
 
+!["screen shot"](https://github.com/aotian16/ESwiftToast/blob/master/screen_shot.png "screen shot")
+
 # install
 just copy ESwiftToast.swift to your project
 
