@@ -65,7 +65,7 @@ class ESwiftToast: UIView {
         var fontSize:CGFloat = 14.0
         var font = UIFont.boldSystemFontOfSize(fontSize)
         
-        var textSize: CGSize = NSString(string: text).boundingRectWithSize(CGSizeMake(CGFloat(280), CGFloat(MAXFLOAT)), options: NSStringDrawingOptions.UsesLineFragmentOrigin, attributes: [NSFontAttributeName: font], context: nil).size
+        var textSize: CGSize = NSString(string: text).boundingRectWithSize(CGSizeMake(CGFloat(UIScreen.mainScreen().applicationFrame.width - 40), CGFloat(MAXFLOAT)), options: NSStringDrawingOptions.UsesLineFragmentOrigin, attributes: [NSFontAttributeName: font], context: nil).size
         
         var textLabel: UILabel = UILabel(frame: CGRectMake(0, 0, textSize.width+12, textSize.height+12))
         self._textLabel = textLabel
