@@ -8,8 +8,6 @@
 
 import UIKit
 
-
-
 /// toast class
 class ESwiftToast: UIView {
     
@@ -48,10 +46,6 @@ class ESwiftToast: UIView {
     /// animation duration
     var _animationDuration = DEFAULT_ANIMATION_DURATION
     
-    required init(coder aDecoder: NSCoder) {
-        super.init(coder: aDecoder)
-    }
-    
     override init(frame: CGRect) {
         super.init(frame: frame)
     }
@@ -62,12 +56,12 @@ class ESwiftToast: UIView {
         
         self._text = text
         
-        var fontSize:CGFloat = 14.0
-        var font = UIFont.boldSystemFontOfSize(fontSize)
+        let fontSize:CGFloat = 14.0
+        let font = UIFont.boldSystemFontOfSize(fontSize)
         
-        var textSize: CGSize = NSString(string: text).boundingRectWithSize(CGSizeMake(CGFloat(UIScreen.mainScreen().applicationFrame.width - 40), CGFloat(MAXFLOAT)), options: NSStringDrawingOptions.UsesLineFragmentOrigin, attributes: [NSFontAttributeName: font], context: nil).size
+        let textSize: CGSize = NSString(string: text).boundingRectWithSize(CGSizeMake(CGFloat(UIScreen.mainScreen().bounds.width - 40), CGFloat(MAXFLOAT)), options: NSStringDrawingOptions.UsesLineFragmentOrigin, attributes: [NSFontAttributeName: font], context: nil).size
         
-        var textLabel: UILabel = UILabel(frame: CGRectMake(0, 0, textSize.width+12, textSize.height+12))
+        let textLabel: UILabel = UILabel(frame: CGRectMake(0, 0, textSize.width+12, textSize.height+12))
         self._textLabel = textLabel
         
         textLabel.backgroundColor = UIColor.clearColor()
@@ -88,6 +82,10 @@ class ESwiftToast: UIView {
         self._contentView.autoresizingMask = UIViewAutoresizing.FlexibleWidth
         
         self._contentView.alpha = 0.0
+    }
+
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
     }
     
     deinit {
@@ -144,7 +142,7 @@ class ESwiftToast: UIView {
     /// show toast by instance
     func innerShow() {
         
-        var window:UIWindow? = UIApplication.sharedApplication().keyWindow
+        let window:UIWindow? = UIApplication.sharedApplication().keyWindow
         
         if let w = window {
             switch _position {
