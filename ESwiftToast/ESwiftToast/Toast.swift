@@ -25,24 +25,14 @@ public class Toast {
     }
     
     /// show toast
-    public class func show(message: String, duration: NSTimeInterval, position: ToastPosition, tapAction: ((ToastView) -> Void)? = nil) {
+    public class func show(message: String, duration: NSTimeInterval = ToastView.DEFAULT_DISPLAY_DURATION, tapAction: ((ToastView) -> Void)? = nil) {
         
         let toast = Toast.make(message)
         
         toast.duration = duration
-        toast.position = position
+        toast.position = ToastPosition.bottom
         toast.tapAction = tapAction
         
         toast.show()
-    }
-    
-    /// show toast
-    public class func show(message: String, tapAction: ((ToastView) -> Void)? = nil) {
-        show(message, duration: ToastView.DEFAULT_DISPLAY_DURATION, position: ToastPosition.bottom, tapAction: tapAction)
-    }
-    
-    /// show toast
-    public class func show(message: String, duration: NSTimeInterval, tapAction: ((ToastView) -> Void)? = nil) {
-        show(message, duration: duration, position: ToastPosition.bottom, tapAction: tapAction)
     }
 }
