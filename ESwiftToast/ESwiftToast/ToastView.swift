@@ -176,4 +176,8 @@ public class ToastView: UIButton {
             NSTimer.scheduledTimerWithTimeInterval(duration, target: self, selector: #selector(hideAnimation), userInfo: nil, repeats: false)
         }
     }
+    
+    public func hide() {
+        hideAnimation()
+    }
 }
