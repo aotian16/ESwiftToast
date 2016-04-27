@@ -11,7 +11,7 @@ import UIKit
 /// toast class
 public class ToastView: UIButton {
     
-    public static let DEFAULT_DISPLAY_DURATION: NSTimeInterval = 8.0
+    public static let DEFAULT_DISPLAY_DURATION: NSTimeInterval = 3.0
     public static let DEFAULToffset: CGFloat = 20
     public static let DEFAULT_ANIMATION_DURATION: NSTimeInterval = 0.3
     
