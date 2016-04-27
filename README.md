@@ -1,7 +1,7 @@
 # ESwiftToast
 An android like toast lib write in swift
 
-<img src="https://github.com/aotian16/ESwiftToast/blob/master/screen_shot.git" width="188px" height="334px" />
+<img src="https://github.com/aotian16/ESwiftToast/blob/master/screen_shot.gif" width="188px" height="334px" />
 
 # install
 | No.  | type     | detail                                   |
